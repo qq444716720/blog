@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import "./index.less"
 
@@ -8,7 +9,8 @@ const colorList = ["#42b983", "#33A5FF", "#B03734", "#2EAFB0", "#6EC1C2", "#ED9E
 
 const PostItem = ({ edge: { node } }) => {
   const { frontmatter, timeToRead, excerpt } = node
-  const { path, title, date, img } = frontmatter
+  const { path, title, date, cover, featuredImage } = frontmatter
+
   const iconIndex = Math.floor(Math.random() * iconList.length);
   const colorIndex = Math.floor(Math.random() * colorList.length);
   return (
@@ -30,8 +32,10 @@ const PostItem = ({ edge: { node } }) => {
       </p>
       </div>
       {
-        img &&
-        <img src={img} alt="" />
+        featuredImage &&
+        featuredImage.childImageSharp &&
+        featuredImage.childImageSharp.fluid &&
+        <Img fluid={featuredImage.childImageSharp.fluid} />
       }
     </div>
   )
