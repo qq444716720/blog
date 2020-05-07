@@ -6,6 +6,8 @@ import Layout from "../components/Layout"
 import PostItem from "../components/PostItem"
 import Banner from "../components/Banner"
 
+import bannerImg from '../images/banner.jpg'
+
 const Posts = (props) => {
   const data = useStaticQuery(graphql`
     query {
@@ -18,8 +20,12 @@ const Posts = (props) => {
               date(formatString: "YYYY-MM-DD")
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
+                  fluid(maxWidth: 400) {
+                    aspectRatio
+                    base64
+                    sizes
+                    src
+                    srcSet
                   }
                 }
               }
@@ -34,7 +40,7 @@ const Posts = (props) => {
   return (
     <Layout>
       <SEO title="博客列表" />
-      <Banner img="https://pic2.zhimg.com/80/8962c3db4c22682ddda5c2c6a8c5680f_1440w.jpg" />
+      <Banner img={bannerImg} />
       <div className="content">
         {
           data && data.allMarkdownRemark.edges.map(edge => (
