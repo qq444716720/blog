@@ -10,6 +10,7 @@ const colorList = ["#42b983", "#33A5FF", "#B03734", "#2EAFB0", "#6EC1C2", "#ED9E
 const PostItem = ({ edge: { node } }) => {
   const { frontmatter, timeToRead, excerpt } = node
   const { path, title, date, cover, featuredImage } = frontmatter
+  console.log('%c 🍜 featuredImage: ', 'font-size:20px;background-color: #ED9EC7;color:#fff;', featuredImage);
 
   const iconIndex = Math.floor(Math.random() * iconList.length);
   const colorIndex = Math.floor(Math.random() * colorList.length);
