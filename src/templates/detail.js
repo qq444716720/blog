@@ -42,7 +42,7 @@ export const pageQuery = graphql`
         title
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1920) {
               aspectRatio
               base64
               sizes
