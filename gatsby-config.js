@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `自信膨胀的汤姆`,
+    description: ``,
+    author: `444716720@qq.com`,
   },
+  pathPrefix: `/blog`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -27,6 +28,22 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-import`,
+      options: {
+        "libraryName": "antd",
+        "style": true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        modifyVars: {
+          "primary-color": "#6ecbc8",
+        },
+        javascriptEnabled: true
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

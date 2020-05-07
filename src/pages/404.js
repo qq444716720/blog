@@ -1,14 +1,29 @@
-import React from "react"
+import React, { useEffect } from "react"
+import lottie from 'lottie-web'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/Layout'
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+import missing from '../static/missing.json'
+import './404.less'
+
+const NotFoundPage = () => {
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: document.getElementById("box"),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: missing
+    })
+  }, [])
+
+  return (
+    <Layout isHome>
+      <div id="notFoundPage">
+        <div id="box" />
+      </div>
+    </Layout>
+  )
+}
 
 export default NotFoundPage
