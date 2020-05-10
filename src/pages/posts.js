@@ -6,7 +6,7 @@ import Layout from "../components/Layout"
 import PostItem from "../components/PostItem"
 import Banner from "../components/Banner"
 
-import bannerImg from '../images/banner.jpg'
+import bannerImg from '../images/banner.png'
 
 const Posts = (props) => {
   const data = useStaticQuery(graphql`

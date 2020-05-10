@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import Layout from "../components/Layout"
 import Banner from "../components/Banner"
 
-import bannerImg from '../images/banner.jpg'
+import bannerImg from '../images/banner.png'
 
 const Detail = ({ children, featuredImage, title }) => {
   const { childImageSharp: { fluid: { src } = {} } = {} } = featuredImage || {}

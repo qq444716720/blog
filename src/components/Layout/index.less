@@ -727,10 +727,10 @@ pre tt:after {
     margin   : auto;
 
     &::after {
-      content      : '— END —';
-      color        : #c0c0c0;
-      display      : block;
-      text-align   : center;
+      content   : '— END —';
+      color     : #c0c0c0;
+      display   : block;
+      text-align: center;
     }
   }
 
@@ -740,10 +740,10 @@ pre tt:after {
     margin   : auto;
 
     &::after {
-      content      : '— END —';
-      color        : #c0c0c0;
-      display      : block;
-      text-align   : center;
+      content   : '— END —';
+      color     : #c0c0c0;
+      display   : block;
+      text-align: center;
     }
   }
 
@@ -798,8 +798,10 @@ blockquote {
 }
 
 .blog-post-content {
+  width     : 100%;
   flex      : 1;
   margin-top: 20px;
+
   table {
     thead {
       background: #eeeeeead;
@@ -820,17 +822,34 @@ deckgo-highlight-code {
   margin: 30px 0;
 }
 
-@media screen and (max-width: 500px) {
+.banner {
+  .banner-box {
+    img {
+      min-width: 100vw;
+    }
+  }
+}
 
-  body,
-  .header,
-  .banner {
-    min-width: 960px;
+@media screen and (max-width: 750px) {
+
+  .header-container,
+  footer {
+    display: none;
   }
 
+  main {
+    width    : 100vw;
+    min-width: 350px;
+  }
+
+  body,
   .banner {
+    min-width: 100vw;
+  }
+
+  .banner-box {
     img {
-      min-width: 960px;
+      min-height: 220px;
     }
   }
 }
