@@ -1,10 +1,10 @@
 exports.ids = ["vendors~stencil-polyfills-dom"];
 exports.modules = {
 
-/***/ "./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm-es5/dom-4dc582fc.js":
-/*!****************************************************************************************************************!*\
-  !*** ./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm-es5/dom-4dc582fc.js ***!
-  \****************************************************************************************************************/
+/***/ "./node_modules/@deckdeckgo/highlight-code/dist/esm-es5/dom-4dc582fc.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@deckdeckgo/highlight-code/dist/esm-es5/dom-4dc582fc.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -481,10 +481,10 @@ catch (e) {
 
 /***/ }),
 
-/***/ "./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm/polyfills/dom.js":
-/*!*************************************************************************************************************!*\
-  !*** ./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm/polyfills/dom.js ***!
-  \*************************************************************************************************************/
+/***/ "./node_modules/@deckdeckgo/highlight-code/dist/esm/polyfills/dom.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@deckdeckgo/highlight-code/dist/esm/polyfills/dom.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

@@ -1,10 +1,10 @@
 exports.ids = ["vendors~stencil-polyfills-core-js"];
 exports.modules = {
 
-/***/ "./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm/polyfills/core-js.js":
-/*!*****************************************************************************************************************!*\
-  !*** ./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm/polyfills/core-js.js ***!
-  \*****************************************************************************************************************/
+/***/ "./node_modules/@deckdeckgo/highlight-code/dist/esm/polyfills/core-js.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@deckdeckgo/highlight-code/dist/esm/polyfills/core-js.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

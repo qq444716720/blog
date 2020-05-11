@@ -1,17 +1,17 @@
 exports.ids = ["vendors~stencil-deckgo-highlight-code-entry-js"];
 exports.modules = {
 
-/***/ "./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm-es5/deckgo-highlight-code.entry.js":
-/*!*******************************************************************************************************************************!*\
-  !*** ./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm-es5/deckgo-highlight-code.entry.js ***!
-  \*******************************************************************************************************************************/
+/***/ "./node_modules/@deckdeckgo/highlight-code/dist/esm-es5/deckgo-highlight-code.entry.js":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@deckdeckgo/highlight-code/dist/esm-es5/deckgo-highlight-code.entry.js ***!
+  \*********************************************************************************************/
 /*! exports provided: deckgo_highlight_code */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deckgo_highlight_code", function() { return DeckdeckgoHighlightCode; });
-/* harmony import */ var _index_d5cbae43_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-d5cbae43.js */ "./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm-es5/index-d5cbae43.js");
+/* harmony import */ var _index_d5cbae43_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index-d5cbae43.js */ "./node_modules/@deckdeckgo/highlight-code/dist/esm-es5/index-d5cbae43.js");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
