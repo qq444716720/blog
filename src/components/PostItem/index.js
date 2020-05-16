@@ -15,27 +15,25 @@ const PostItem = ({ edge: { node } }) => {
   const colorIndex = Math.floor(Math.random() * colorList.length);
   return (
     <div to={path} className="post-item">
-      <div style={{
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-      }}>
-        <h2>
+      <div className="post-content">
+        <h3>
           {iconList[iconIndex]}
           <Link style={{ color: colorList[colorIndex] }} to={path}> {title} </Link>
-        </h2>
+        </h3>
+        <p className="post-meta">
+          发布于 {date} 预计阅读需要 {timeToRead} 分钟
+        </p>
         <div className="post-content-preview">
           {excerpt}
         </div>
-        <p className="post-meta">
-          发布于 {date} 预计阅读需要 {timeToRead} 分钟
-      </p>
       </div>
       {
         featuredImage &&
         featuredImage.childImageSharp &&
         featuredImage.childImageSharp.fluid &&
-        <Img fluid={featuredImage.childImageSharp.fluid} />
+        <Link className="link" to={path}>
+          <Img fluid={featuredImage.childImageSharp.fluid} />
+        </Link>
       }
     </div>
   )

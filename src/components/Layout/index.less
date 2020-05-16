@@ -825,26 +825,56 @@ deckgo-highlight-code {
   }
 }
 
+.m-menu {
+  display: none;
+}
+
 @media screen and (max-width: 750px) {
 
-  .header-container,
+  header {
+    .header-container {
+      padding: 0.5rem 1rem;
+    }
+
+    .blog-links {
+      display: none;
+    }
+
+    .m-menu {
+      display  : block;
+      font-size: 18px;
+    }
+  }
+
+  main {
+    width   : 100vw;
+    overflow: hidden;
+
+    .banner .banner-box {
+      img {
+        min-height: 230px;
+      }
+    }
+  }
+
   footer {
     display: none;
   }
 
-  main {
-    width    : 100vw;
-    min-width: 350px;
-  }
+}
 
-  body,
-  .banner {
-    min-width: 100vw;
-  }
 
-  .banner-box {
-    img {
-      min-height: 220px;
-    }
+.ant-drawer-body {
+  div {
+    text-indent  : 10px;
+    border-bottom: 1px dashed #eee;
+    line-height  : 45px;
   }
+}
+
+code {
+  width: 100%;
+  overflow-x: scroll;
+  word-break: break-all;
+  white-space: pre;
 }

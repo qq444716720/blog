@@ -1,7 +1,8 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import classnames from 'classnames'
+import { Drawer } from 'antd'
 
 import { getScrollTop } from '../../utils'
 import logo from '../../images/gatsby-icon.png'
@@ -10,24 +11,32 @@ import './index.less'
 
 const links = [{
   path: '/',
-  text: '首页'
+  text: '首页',
+  icon: '🍙',
 }, {
   path: '/posts',
-  text: '博客'
+  text: '博客',
+  icon: '📁',
 }, {
-  path: '/series',
-  text: '系列'
+  path: '/links',
+  text: '链接',
+  icon: '🔗'
+}, {
+  path: '/app',
+  text: '工具',
+  icon: '🔧'
 }, {
   path: '/about',
-  text: '关于'
+  text: '关于',
+  icon: '🤫'
 }]
 
 const Header = ({ siteTitle, isHome }) => {
   useEffect(() => {
     const navBar = document.querySelector(".header");
-    const navBarH = 76;
     let scroll = getScrollTop();
     window.addEventListener("scroll", function (e) {
+      const navBarH = document.body.offsetWidth > 750 ? 76 : 58;
       let top = getScrollTop();
       let dir = top - scroll;
 
@@ -56,6 +65,7 @@ const Header = ({ siteTitle, isHome }) => {
   if (typeof window !== 'undefined') {
     pathname = window.location.pathname.replace('/blog', '') || ''
   }
+  const [visible, setVisible] = useState(false)
   return (
     <header className='header' style={isHome ? {} : {
       background: '#0e0e0e61',
@@ -70,6 +80,9 @@ const Header = ({ siteTitle, isHome }) => {
             {siteTitle}
           </Link>
         </h3>
+        <div className="m-menu">
+          👉<span style={{ marginLeft: 5 }} onClick={() => setVisible(true)}>🛎</span>
+        </div>
         <div className='blog-links'>
           {
             links.map(({ path, text }) => (
@@ -84,6 +97,27 @@ const Header = ({ siteTitle, isHome }) => {
           }
         </div>
       </div>
+      <Drawer
+        title="我的博客"
+        placement="right"
+        closable={false}
+        onClose={() => setVisible(false)}
+        visible={visible}
+      >
+        {
+          links.map(({ path, text, icon }) => (
+            <div key={path} >
+              <Link to={path} className={classnames({
+                active: (path.length === 1 && pathname === path) ||
+                  (path.length > 1 && pathname.includes(path.slice(1))) ||
+                  (path === '/posts' && pathname.includes('detail'))
+              })}>
+                {icon} &nbsp;&nbsp; {text}
+              </Link>
+            </div>
+          ))
+        }
+      </Drawer>
     </header >
   )
 }

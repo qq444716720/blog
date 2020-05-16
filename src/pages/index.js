@@ -10,14 +10,12 @@ import './index.less'
 
 const tips = [
   "“但是”之前的话都是废话",
-  "一切都将逝去，唯有死神永生",
   "少啰嗦，你还不如虫子呢！",
-  "心若不动，风又奈何"
 ]
 
 const IndexPage = () => {
   useEffect(() => {
-    const jsonIndex = Math.floor(Math.random() * 5)
+    const jsonIndex = Math.floor(Math.random() * 7)
     const json = require(`../static/${jsonIndex}.json`)
     lottie.loadAnimation({
       container: document.getElementById("box"),
@@ -39,7 +37,7 @@ const IndexPage = () => {
             <Button type="primary" size="large" shape="round">开始阅读{' '}<span>🍉</span></Button>
           </Link>
         </div>
-        <div id="box" style={{ maxWidth: `500px`, marginBottom: `1.45rem` }} />
+        <div id="box" />
       </div>
     </Layout>
   )

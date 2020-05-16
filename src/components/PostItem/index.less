@@ -1,19 +1,61 @@
 .post-item {
   margin       : 20px;
-  min-height   : 160px;
+  height       : 250px;
   display      : flex;
-  border-bottom: 1px solid #eee;
+  align-items  : center;
+  border-radius: 8px;
+  box-shadow: rgba(46, 41, 51, 0.08) 0px 1px 2px, rgba(71, 63, 79, 0.08) 0px 2px 4px;
+  overflow     : hidden;
+  margin-bottom: 30px;
 
-  a {
-    &:hover {
-      border-bottom: 3px dashed #6ecbc8;
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .post-content {
+    flex          : 1;
+    display       : flex;
+    flex-direction: column;
+    padding       : 0 40px;
+    height        : 150px;
+  }
+
+  h3,
+  .post-meta {
+    margin: 0;
+  }
+
+  &:hover {
+    box-shadow: rgba(46, 41, 51, 0.08) 0px 4px 8px, rgba(71, 63, 79, 0.16) 0px 8px 16px;
+    transform: translateY(-3px);
+    transition: all .6s;
+
+    img {
+      transform: scale(1.1)
     }
   }
 
+  h3 {
+    a {
+      &:hover {
+        border-bottom: 3px dashed #6ecbc8;
+      }
+    }
+  }
+
+  .link {
+    display: block;
+    width  : 45%;
+    height : 100%;
+  }
+
   .gatsby-image-wrapper {
-    width : 230px;
-    height: 140px;
-    margin: 0 10px;
+    width : 100%;
+    height: 100%;
+
+    img {
+      transition: all .6s !important;
+    }
   }
 
   .post-content-preview {
@@ -25,5 +67,30 @@
 
   .post-meta {
     margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .post-item {
+    flex-direction: column-reverse;
+    min-height        : 400px;
+    align-items   : flex-start;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    &:nth-child(odd) {
+      flex-direction: column-reverse;
+    }
+
+    .post-content {
+      padding: 20px;
+    }
+
+    .link {
+      width : 100%;
+      height: 200px;
+    }
   }
 }

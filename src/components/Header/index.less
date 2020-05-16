@@ -6,7 +6,7 @@
   &.fixed {
     position  : fixed;
     top       : -76px;
-    transition: transform .5s ease, background-color .3s ease;
+    transition: all .6s;
   }
 
   &.visible {
@@ -197,5 +197,13 @@
   100% {
     transform : translateX(90px);
     background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    &.fixed {
+      top: -58px;
+    }
   }
 }
