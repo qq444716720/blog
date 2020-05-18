@@ -51,12 +51,13 @@ module.exports = {
               offsetY: `100`,
             },
           },
-          {
-            resolve: `gatsby-remark-highlight-code`,
-            options: {
-              terminal: 'carbon',
-            }
-          },
+          `gatsby-remark-prismjs`,
+          // {
+          //   resolve: `gatsby-remark-highlight-code`,
+          //   options: {
+          //     terminal: 'carbon',
+          //   }
+          // },
         ],
       },
     },

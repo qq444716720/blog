@@ -855,12 +855,20 @@ deckgo-highlight-code {
   }
 }
 
-// deckgo-highlight-code-carbon /deep/ code {
-//   width: 100%;
-//   overflow-x: scroll;
-//   word-break: break-all;
-//   white-space: pre;
-// }
+// prismjs start
+
+.gatsby-highlight-code-line {
+  background-color: #feb;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+// prismjs end
+
+
 @keyframes poke {
   0% {
     transform: translateX(0px);
