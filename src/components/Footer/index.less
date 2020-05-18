@@ -1,33 +1,39 @@
 .footer-wrap {
-    padding: 0 30px;
+    padding   : 0 30px;
     background: #000;
-    color: #fff;
+    color     : #fff;
+
+    .gatsby-image-wrapper {
+        width       : 24px;
+        margin-right: 6px;
+    }
 
     .useful-content {
-        display: flex;
-        padding: 50px 30px;
+        display        : flex;
+        padding        : 50px 30px;
         justify-content: space-between;
-        max-width: 960px;
-        margin: 0 auto;
+        max-width      : 960px;
+        margin         : 0 auto;
 
         ul {
-            margin: 0;
+            margin      : 0;
             margin-right: 25px;
 
             li {
-                display: flex;
+                display    : flex;
                 align-items: center;
-                list-style: none;
+                list-style : none;
                 line-height: 30px;
-                margin: 0;
-                font-size: 16px;
+                margin     : 0;
+                font-size  : 16px;
+                cursor     : pointer;
 
                 img {
                     height: 20px;
                     margin: 0 10px 0 0;
                 }
 
-                & > a {
+                &>a {
                     color: #fff;
 
                     &:hover {
@@ -36,7 +42,7 @@
 
                     span {
                         font-size: 14px;
-                        color: #A4A5B3;
+                        color    : #A4A5B3;
                     }
                 }
             }
@@ -45,9 +51,15 @@
 
     .site-footer-info {
         margin-bottom: 0px;
-        padding: 20px 0;
-        text-align: center;
-        color: #A4A5B3;
-        font-size: 15px;
+        padding      : 20px 0;
+        text-align   : center;
+        color        : #A4A5B3;
+        font-size    : 15px;
+    }
+}
+
+.ant-popover-inner-content {
+    .gatsby-image-wrapper {
+        width: 200px;
     }
 }

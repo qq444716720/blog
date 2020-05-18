@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import { Drawer } from 'antd'
 
 import { getScrollTop } from '../../utils'
-import logo from '../../images/gatsby-icon.png'
+import Logo from '../Image/logo'
 
 import './index.less'
 
@@ -76,12 +76,12 @@ const Header = ({ siteTitle, isHome }) => {
       <div className='header-container'>
         <h3>
           <Link to="/" >
-            <span className='logo'><img src={logo} alt="logo" /></span>
+            <span className='logo'><Logo /></span>
             {siteTitle}
           </Link>
         </h3>
-        <div className="m-menu">
-          👉<span style={{ marginLeft: 5 }} onClick={() => setVisible(true)}>🛎</span>
+        <div className="m-menu" onClick={() => setVisible(true)}>
+          👉<span style={{ marginLeft: 5 }}>🛎</span>
         </div>
         <div className='blog-links'>
           {
@@ -106,15 +106,13 @@ const Header = ({ siteTitle, isHome }) => {
       >
         {
           links.map(({ path, text, icon }) => (
-            <div key={path} >
-              <Link to={path} className={classnames({
-                active: (path.length === 1 && pathname === path) ||
-                  (path.length > 1 && pathname.includes(path.slice(1))) ||
-                  (path === '/posts' && pathname.includes('detail'))
-              })}>
-                {icon} &nbsp;&nbsp; {text}
-              </Link>
-            </div>
+            <Link key={path} to={path} className={classnames({
+              active: (path.length === 1 && pathname === path) ||
+                (path.length > 1 && pathname.includes(path.slice(1))) ||
+                (path === '/posts' && pathname.includes('detail'))
+            })}>
+              {icon} &nbsp;&nbsp; {text}
+            </Link>
           ))
         }
       </Drawer>

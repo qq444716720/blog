@@ -2,11 +2,11 @@ import React from "react"
 
 import "./index.less"
 
-const Banner = ({ img }) => {
+const Banner = (props) => {
   return (
     <div className="banner">
       <div className="banner-box">
-        <img src={img} alt="" />
+        {props.children}
       </div>
     </div>
   )

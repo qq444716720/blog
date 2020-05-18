@@ -849,12 +849,6 @@ deckgo-highlight-code {
   main {
     width   : 100vw;
     overflow: hidden;
-
-    .banner .banner-box {
-      img {
-        min-height: 230px;
-      }
-    }
   }
 
   footer {
@@ -865,16 +859,17 @@ deckgo-highlight-code {
 
 
 .ant-drawer-body {
-  div {
+  a {
+    display      : block;
     text-indent  : 10px;
     border-bottom: 1px dashed #eee;
     line-height  : 45px;
   }
 }
 
-code {
-  width: 100%;
-  overflow-x: scroll;
-  word-break: break-all;
-  white-space: pre;
-}
+// deckgo-highlight-code-carbon /deep/ code {
+//   width: 100%;
+//   overflow-x: scroll;
+//   word-break: break-all;
+//   white-space: pre;
+// }

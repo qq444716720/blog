@@ -5,8 +5,7 @@ import SEO from "../components/seo"
 import Layout from "../components/Layout"
 import PostItem from "../components/PostItem"
 import Banner from "../components/Banner"
-
-import bannerImg from '../images/banner.png'
+import BannerImage from '../components/Image/banner'
 
 const Posts = (props) => {
   const data = useStaticQuery(graphql`
@@ -40,7 +39,9 @@ const Posts = (props) => {
   return (
     <Layout>
       <SEO title="博客列表" />
-      <Banner img={bannerImg} />
+      <Banner>
+        <BannerImage />
+      </Banner>
       <div className="content">
         {
           data && data.allMarkdownRemark.edges.map(edge => (

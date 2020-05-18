@@ -1,9 +1,11 @@
 import React from 'react'
+import { Popover } from 'antd'
+import CallWechat from '../Image/call-wechat'
 
 import './index.less'
 
-import githubIcon from '../../images/github.png'
-import weChatIcon from '../../images/weChat.png'
+import GithubIcon from '../Image/github'
+import WechatIcon from '../Image/wechat'
 
 const linkList = [{
   typeName: '常用链接',
@@ -43,12 +45,12 @@ const linkList = [{
     name: 'github',
     url: 'https://github.com/qq444716720',
     remark: '',
-    icon: githubIcon
+    icon: <GithubIcon />
   }, {
-    name: '微信',
+    name: <Popover placement="right" content={<CallWechat />}>微信</Popover>,
     url: '',
     remark: '',
-    icon: weChatIcon
+    icon: <WechatIcon />
   }]
 }]
 
@@ -63,12 +65,17 @@ const Footer = (props) => {
                 <h3>{list.typeName}</h3>
                 <ul>
                   {
-                    list.children.map((child, cIndex) =>
+                    list.children.map(({ url, name, remark, icon }, cIndex) =>
                       <li key={cIndex}>
-                        {child.icon && <img src={child.icon} alt="--" />}
-                        <a target='_blank' rel="noopener noreferrer" href={child.url}>
-                          {child.name} {child.remark && <span>- {child.remark}</span>}
-                        </a>
+                        {icon}
+                        {
+                          url ?
+                            <a target='_blank' rel="noopener noreferrer" href={url}>
+                              {name} {remark && <span>- {remark}</span>}
+                            </a>
+                            :
+                            <span>{name} {remark && <span>- {remark}</span>}</span>
+                        }
                       </li>
                     )
                   }

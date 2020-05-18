@@ -6,7 +6,7 @@
     &::before {
       position           : absolute;
       left               : 0;
-      bottom             : 20px;
+      bottom             : -1px;
       content            : "";
       width              : 200%;
       height             : 100%;
@@ -16,6 +16,13 @@
       background-position: left bottom;
       background-size    : 50% auto;
       animation          : move 10s linear infinite;
+      z-index            : 10;
+    }
+
+    .gatsby-image-wrapper,
+    img {
+      width     : 100vw;
+      min-height: 230px;
     }
   }
 }
