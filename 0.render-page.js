@@ -1,10 +1,10 @@
 exports.ids = [0];
 exports.modules = {
 
-/***/ "./node_modules/@deckdeckgo/highlight-code/dist/esm-es5/shadow-css-aca01ffa.js":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/@deckdeckgo/highlight-code/dist/esm-es5/shadow-css-aca01ffa.js ***!
-  \*************************************************************************************/
+/***/ "./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm-es5/shadow-css-aca01ffa.js":
+/*!***********************************************************************************************************************!*\
+  !*** ./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm-es5/shadow-css-aca01ffa.js ***!
+  \***********************************************************************************************************************/
 /*! exports provided: scopeCss */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

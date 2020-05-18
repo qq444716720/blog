@@ -1,10 +1,10 @@
 exports.ids = ["vendors~stencil-polyfills-css-shim"];
 exports.modules = {
 
-/***/ "./node_modules/@deckdeckgo/highlight-code/dist/esm-es5/css-shim-9cf83bbd.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/@deckdeckgo/highlight-code/dist/esm-es5/css-shim-9cf83bbd.js ***!
-  \***********************************************************************************/
+/***/ "./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm-es5/css-shim-9cf83bbd.js":
+/*!*********************************************************************************************************************!*\
+  !*** ./node_modules/_@deckdeckgo_highlight-code@1.0.4@@deckdeckgo/highlight-code/dist/esm-es5/css-shim-9cf83bbd.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
