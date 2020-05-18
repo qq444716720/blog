@@ -81,7 +81,7 @@ const Header = ({ siteTitle, isHome }) => {
           </Link>
         </h3>
         <div className="m-menu" onClick={() => setVisible(true)}>
-          👉<span style={{ marginLeft: 5 }}>🛎</span>
+          <span className="head">👉</span><span className="bell" style={{ marginLeft: 5 }}>🛎</span>
         </div>
         <div className='blog-links'>
           {

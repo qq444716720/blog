@@ -1,7 +1,19 @@
 #notFoundPage {
-  width          : 980px;
-  min-height     : 600px;
-  display        : flex;
-  align-items    : center;
+  width: 980px;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 750px) {
+  #notFoundPage {
+    width: 100vw;
+
+    #box {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
