@@ -857,14 +857,102 @@ deckgo-highlight-code {
 
 // prismjs start
 
-.gatsby-highlight-code-line {
-  background-color: #feb;
-  display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  padding-right: 1em;
-  padding-left: 0.75em;
-  border-left: 0.25em solid #f99;
+// .gatsby-highlight-code-line {
+//   background-color: #feb;
+//   display: block;
+//   margin-right: -1em;
+//   margin-left: -1em;
+//   padding-right: 1em;
+//   padding-left: 0.75em;
+//   border-left: 0.25em solid #f99;
+// }
+
+.language-text {
+  word-break: break-all !important;
+  white-space: initial !important;
+  color: hsl(216, 100%, 68%) !important;
+  background-color: rgba(27,31,35,.05) !important;
+  padding-left: 5px !important;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background-color: #282c34;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  color: #abb2bf;
+}
+
+pre[class*="language-"] {
+  box-shadow: rgba(0, 0, 0, 0.55) 0 8px 16px;
+  margin: 30px 0;
+}
+
+.token.string {
+  color: #50fa7b;
+}
+
+code .token.atrule,
+code .token.attr-value,
+code .token.keyword {
+  color: #ff79c6;
+}
+
+
+code .token.operator,
+code .token.entity,
+code .token.url,
+code .language-css .token.string,
+code .style .token.string {
+  color: #ff79c6;
+}
+
+code .token.function,
+code .token.class-name {
+  color: #ffb86c;
+}
+
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.punctuation,
+.token.cdata {
+  color: #6272a4;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #bd93f9;
+}
+
+code {
+  color: #fff !important;
+}
+
+div.carbon {
+  display: flex;
+  justify-content: flex-start;
+  div {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .red {
+    background-color: #FF5F56;
+  }
+  .yellow {
+    background-color: #FFBD2E;
+  }
+  .green {
+    background-color: #27C93F;
+  }
 }
 // prismjs end
 

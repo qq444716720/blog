@@ -9,14 +9,6 @@ import BannerImage from '../components/Image/banner'
 
 const Detail = ({ children, featuredImage, title }) => {
   const { childImageSharp: { fluid } = {} } = featuredImage || {}
-  useEffect(() => {
-    try {
-      const deckdeckgoHighlightCodeLoader = require("@deckdeckgo/highlight-code/dist/loader")
-      deckdeckgoHighlightCodeLoader.defineCustomElements(window);
-    } catch (err) {
-      console.error(err);
-    }
-  }, [])
 
   return (
     <Layout footer={false} style={{

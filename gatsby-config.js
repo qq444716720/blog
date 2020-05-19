@@ -52,12 +52,6 @@ module.exports = {
             },
           },
           `gatsby-remark-prismjs`,
-          // {
-          //   resolve: `gatsby-remark-highlight-code`,
-          //   options: {
-          //     terminal: 'carbon',
-          //   }
-          // },
         ],
       },
     },

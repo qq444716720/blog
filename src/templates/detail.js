@@ -23,7 +23,7 @@ export default function Template({ data }) {
         </Affix>
         <div
           className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
+          dangerouslySetInnerHTML={{ __html: html.replace(/<div class="gatsby-highlight"/g, '<div class="carbon"><div class="red"></div><div class="yellow"></div><div class="green"></div></div><div class="gatsby-highlight"') }}
         />
       </div>
     </Detail>
