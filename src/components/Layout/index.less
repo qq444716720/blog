@@ -754,7 +754,7 @@ blockquote {
   padding: 20px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  border-left: 5px solid #f00;
+  border-left: 3px solid #f00;
   &::after {
     content: '— ✍️';
     font-size: 25px;
@@ -793,10 +793,6 @@ blockquote {
       text-align: center;
     }
   }
-}
-
-deckgo-highlight-code {
-  margin: 30px 0;
 }
 
 .banner {
@@ -885,7 +881,13 @@ code[class*="language-"], pre[class*="language-"] {
 
 pre[class*="language-"] {
   box-shadow: rgba(0, 0, 0, 0.55) 0 8px 16px;
-  margin: 30px 0;
+  margin: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.gatsby-highlight {
+  margin-bottom: 30px;
 }
 
 .token.string {
@@ -938,6 +940,11 @@ code {
 div.carbon {
   display: flex;
   justify-content: flex-start;
+  background-color: #282c34;
+  padding: 14px 14px 0 14px;
+  border-top-right-radius: 0.3em;
+  border-top-left-radius: 0.3em;
+  box-shadow: rgba(0, 0, 0, 0.55) 0 8px 16px;
   div {
     width: 12px;
     height: 12px;
