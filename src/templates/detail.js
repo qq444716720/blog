@@ -16,15 +16,15 @@ export default function Template({ data }) {
         <div>预计阅读需要 {timeToRead} 分钟</div>
       </div>
       <div className="blog-wrap">
+        <div
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: html.replace(/<div class="gatsby-highlight"/g, '<div class="carbon"><div class="red"></div><div class="yellow"></div><div class="green"></div></div><div class="gatsby-highlight"') }}
+        />
         <Affix offsetTop={100}>
           <div
             className="catalog"
             dangerouslySetInnerHTML={{ __html: `<h5 style="margin-left: 10px">目录</h5>${tableOfContents}` }} />
         </Affix>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html.replace(/<div class="gatsby-highlight"/g, '<div class="carbon"><div class="red"></div><div class="yellow"></div><div class="green"></div></div><div class="gatsby-highlight"') }}
-        />
       </div>
     </Detail>
   )

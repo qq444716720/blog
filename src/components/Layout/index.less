@@ -746,7 +746,7 @@ pre tt:after {
 
 .blog-wrap {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 blockquote {
@@ -864,7 +864,7 @@ blockquote {
 // }
 
 .language-text {
-  word-break: break-all !important;
+  word-break: break-word !important;
   white-space: initial !important;
   color: hsl(216, 100%, 68%) !important;
   background-color: rgba(27,31,35,.05) !important;
@@ -884,6 +884,7 @@ pre[class*="language-"] {
   margin: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+  max-width: 870px;
 }
 
 .gatsby-highlight {
