@@ -35,7 +35,7 @@ const Header = ({ siteTitle, isHome }) => {
   useEffect(() => {
     const navBar = document.querySelector(".header");
     let scroll = getScrollTop();
-    window.addEventListener("scroll", function (e) {
+    function setNavBar(e) {
       const navBarH = document.body.offsetWidth > 750 ? 76 : 58;
       let top = getScrollTop();
       let dir = top - scroll;
@@ -58,7 +58,11 @@ const Header = ({ siteTitle, isHome }) => {
       }
 
       scroll = top;
-    }, { passive: true });
+    }
+    window.addEventListener("scroll", setNavBar, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', setNavBar)
+    }
   }, [])
 
   let pathname = '';
