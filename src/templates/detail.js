@@ -18,7 +18,7 @@ export default function Template({ data }) {
       <div className="blog-wrap">
         <div
           className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html.replace(/<div class="gatsby-highlight"/g, '<div class="carbon"><div class="red"></div><div class="yellow"></div><div class="green"></div></div><div class="gatsby-highlight"') }}
+          dangerouslySetInnerHTML={{ __html: html.replace(/<code class="language-[^text]/g, '<div class="carbon"><div class="red"></div><div class="yellow"></div><div class="green"></div></div><code class="language-') }}
         />
         <Affix offsetTop={100}>
           <div
