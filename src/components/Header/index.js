@@ -65,9 +65,9 @@ const Header = ({ siteTitle, isHome }) => {
     }
   }, [])
 
-  let pathname = '';
+  let pathname = '/';
   if (typeof window !== 'undefined') {
-    pathname = window.location.pathname.replace('/blog', '') || ''
+    pathname = window.location.pathname.replace('/blog', '') || '/'
   }
   const [visible, setVisible] = useState(false)
   return (

@@ -15,7 +15,7 @@ const tips = [
 
 const IndexPage = () => {
   useEffect(() => {
-    const jsonIndex = Math.floor(Math.random() * 7)
+    const jsonIndex = Math.floor(Math.random() * 12)
     const json = require(`../static/${jsonIndex}.json`)
     lottie.loadAnimation({
       container: document.getElementById("box"),
