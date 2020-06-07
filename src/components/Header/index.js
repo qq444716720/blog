@@ -18,6 +18,10 @@ const links = [{
   text: '博客',
   icon: '📁',
 }, {
+  path: '/tags',
+  text: '标签',
+  icon: '🔗'
+}, {
   path: '/links',
   text: '链接',
   icon: '🔗'
