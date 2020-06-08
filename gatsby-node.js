@@ -46,3 +46,18 @@ exports.createPages = async ({ actions, graphql }) => {
     })
   })
 }
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /echarts-wordcloud/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
