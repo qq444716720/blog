@@ -3,6 +3,8 @@ import echarts from 'echarts'
 
 import Layout from '../components/Layout'
 
+import './tags.less'
+
 require('echarts-wordcloud')
 
 
@@ -76,6 +78,8 @@ const TagPage = () => {
         value: Math.sqrt(keywords[name])
       })
     }
+
+    const isMobile = (document.body.offsetWidth / document.body.offsetHeight) <= 0.7
     const option = {
       series: [{
         type: 'wordCloud',
@@ -83,9 +87,9 @@ const TagPage = () => {
         maskImage,
         left: 'center',
         top: 'center',
-        width: '70%',
-        height: '70%',
-        sizeRange: [12, 60],
+        width: isMobile ? '90%' : '70%',
+        height: isMobile ? '50%' : '70%',
+        sizeRange: isMobile ? [14, 22] : [12, 60],
         rotationRange: [-5, 30],
         rotationStep: 45,
         gridSize: 8,
@@ -104,7 +108,7 @@ const TagPage = () => {
           },
           emphasis: {
             fontWeight: 500,
-            fontSize: 60,
+            fontSize: isMobile ? 24 : 60,
             shadowBlur: 10,
             shadowColor: '#333',
           }
@@ -127,7 +131,7 @@ const TagPage = () => {
   return (
     <Layout isHome>
       <div className="tags-page">
-        <div style={{ width: 1000, height: 700 }} id="main"></div>
+        <div id="main"></div>
       </div>
     </Layout>
   )

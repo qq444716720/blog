@@ -20,7 +20,7 @@ const links = [{
 }, {
   path: '/tags',
   text: '标签',
-  icon: '🔗'
+  icon: '🏷'
 }, {
   path: '/links',
   text: '链接',
