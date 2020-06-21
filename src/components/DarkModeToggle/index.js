@@ -3,14 +3,19 @@ import { CSSTransition } from "react-transition-group"
 import "./index.less"
 
 export default function DarkModeToggle() {
-  const [darkMode, setDarkMode] = useState(localStorage.getItem('darkMode') === 'true')
+  const [darkMode, setDarkMode] = useState(
+    typeof window !== 'undefined' ?
+      localStorage.getItem('darkMode') === 'true' : false
+  )
 
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark")
-      document.getElementsByClassName('switch')[0].classList.add("switch-enter-done")
-    } else {
-      document.body.classList.remove("dark")
+    if (typeof window !== 'undefined') {
+      if (darkMode) {
+        document.body.classList.add("dark")
+        document.getElementsByClassName('switch')[0].classList.add("switch-enter-done")
+      } else {
+        document.body.classList.remove("dark")
+      }
     }
   }, [darkMode])
 
@@ -19,7 +24,9 @@ export default function DarkModeToggle() {
       in={darkMode}
       classNames="switch"
       onClick={() => {
-        localStorage.setItem('darkMode', String(!darkMode))
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('darkMode', String(!darkMode))
+        }
         setDarkMode(!darkMode)
       }}
       timeout={0}
