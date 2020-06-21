@@ -830,12 +830,19 @@ blockquote {
     }
 
     .blog-links {
-      display: none;
+      display: none !important;
     }
 
     .m-menu {
-      display  : block;
+      display: flex;
+      align-items: center;
       font-size: 18px;
+      color: #fff;
+
+      .switch {
+        width: 98px;
+        height: 31px;
+      }
 
       .head {
         display  : inline-block;

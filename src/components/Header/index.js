@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import classnames from 'classnames'
 import { Drawer } from 'antd'
 
+import useWindowSize from '../../hooks/useWindowSize'
+import DarkModeToggle from '../DarkModeToggle'
 import { getScrollTop } from '../../utils'
 import Logo from '../Image/logo'
 
@@ -36,6 +38,7 @@ const links = [{
 }]
 
 const Header = ({ siteTitle, isHome }) => {
+  const isMobile = useWindowSize().width <= 750
   useEffect(() => {
     const navBar = document.querySelector(".header");
     let scroll = getScrollTop();
@@ -83,15 +86,17 @@ const Header = ({ siteTitle, isHome }) => {
     }>
       <div className='header-container'>
         <h3>
-          <Link to="/" >
+          <Link to="/" style={{ whiteSpace: 'nowrap' }}>
             <span className='logo'><Logo /></span>
-            {siteTitle}
+            <span>{siteTitle}</span>
           </Link>
         </h3>
-        <div className="m-menu" onClick={() => setVisible(true)}>
-          <span className="head">👉</span><span className="bell" style={{ marginLeft: 5 }}>🛎</span>
+        <div className="m-menu">
+          {isMobile && <DarkModeToggle />}
+          <span onClick={() => setVisible(true)} className="head">👉</span><span className="bell" style={{ marginLeft: 5 }}>🛎</span>
         </div>
         <div className='blog-links'>
+          {!isMobile && <DarkModeToggle />}
           {
             links.map(({ path, text }) => (
               <Link key={path} to={path} className={classnames({
