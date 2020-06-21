@@ -43,28 +43,31 @@ const Header = ({ siteTitle, isHome }) => {
     const navBar = document.querySelector(".header");
     let scroll = getScrollTop();
     function setNavBar(e) {
-      const navBarH = document.body.offsetWidth > 750 ? 76 : 58;
-      let top = getScrollTop();
-      let dir = top - scroll;
+      if (document.body.offsetHeight > 750) {
 
-      if (top > navBarH && !navBar.classList.contains("fixed")) {
-        navBar.classList.add("fixed");
+        const navBarH = document.body.offsetWidth > 750 ? 76 : 58;
+        let top = getScrollTop();
+        let dir = top - scroll;
+
+        if (top > navBarH && !navBar.classList.contains("fixed")) {
+          navBar.classList.add("fixed");
+        }
+
+        if (top <= 0 && navBar.classList.contains("fixed")) {
+          navBar.classList.remove("fixed");
+          navBar.classList.remove("visible");
+        }
+
+        if (dir < 0 && navBar.classList.contains("fixed") && !navBar.classList.contains("visible")) {
+          navBar.classList.add("visible");
+        }
+
+        if (dir > 0 && navBar.classList.contains("fixed") && navBar.classList.contains("visible")) {
+          navBar.classList.remove("visible");
+        }
+
+        scroll = top;
       }
-
-      if (top <= 0 && navBar.classList.contains("fixed")) {
-        navBar.classList.remove("fixed");
-        navBar.classList.remove("visible");
-      }
-
-      if (dir < 0 && navBar.classList.contains("fixed") && !navBar.classList.contains("visible")) {
-        navBar.classList.add("visible");
-      }
-
-      if (dir > 0 && navBar.classList.contains("fixed") && navBar.classList.contains("visible")) {
-        navBar.classList.remove("visible");
-      }
-
-      scroll = top;
     }
     window.addEventListener("scroll", setNavBar, { passive: true });
     return () => {
