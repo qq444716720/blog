@@ -27,10 +27,10 @@ const links = [{
   path: '/links',
   text: '链接',
   icon: '🔗'
-}, {
-  path: '/app',
-  text: '工具',
-  icon: '🔧'
+  // }, {
+  //   path: '/app',
+  //   text: '工具',
+  //   icon: '🔧'
 }, {
   path: '/about',
   text: '关于',

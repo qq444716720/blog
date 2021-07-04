@@ -10,34 +10,39 @@ import WechatIcon from '../Image/wechat'
 const linkList = [{
   typeName: '常用链接',
   children: [{
-    name: 'easyicon',
-    url: 'https://www.easyicon.net/',
-    remark: '找到你想要的icon',
-    icon: ''
+    name: 'Can I use',
+    url: 'https://www.caniuse.com',
+    remark: '兼容自检',
+    target: '_blank',
   }, {
     name: 'tinypng',
-    url: 'https://tinypng.com/',
+    url: 'https://tinypng.com',
     remark: '压缩图片',
+    target: '_blank',
     icon: ''
   }, {
     name: 'more ...',
-    url: 'https://tinypng.com/',
+    url: '/links',
   }]
 }, {
   typeName: '工具集',
   children: [{
-    name: 'Can i use',
-    url: 'https://www.easyicon.net/',
-    remark: '',
+    name: '语雀',
+    url: 'https://www.yuque.com',
+    remark: '专业的云端知识库',
+    target: '_blank',
     icon: ''
   }, {
-    name: 'npm',
-    url: 'https://www.npmjs.com/',
-    remark: '',
+    name: '掘金',
+    url: 'https://juejin.cn',
+    remark: '代码不止,掘金不停',
+    target: '_blank',
     icon: ''
   }, {
-    name: 'more ...',
-    url: 'https://tinypng.com/',
+    name: 'Notion',
+    url: 'https://www.notion.so',
+    target: '_blank',
+    remark: '万物皆对象',
   }]
 }, {
   typeName: '我的',
@@ -45,6 +50,7 @@ const linkList = [{
     name: 'github',
     url: 'https://github.com/qq444716720',
     remark: '',
+    target: '_blank',
     icon: <GithubIcon />
   }, {
     name: <Popover placement="right" content={<CallWechat />}>微信</Popover>,
@@ -65,12 +71,12 @@ const Footer = (props) => {
                 <h3>{list.typeName}</h3>
                 <ul>
                   {
-                    list.children.map(({ url, name, remark, icon }, cIndex) =>
+                    list.children.map(({ url, name, remark, icon, target }, cIndex) =>
                       <li key={cIndex}>
                         {icon}
                         {
                           url ?
-                            <a target='_blank' rel="noopener noreferrer" href={url}>
+                            <a target={target} rel="noopener noreferrer" href={url}>
                               {name} {remark && <span>- {remark}</span>}
                             </a>
                             :

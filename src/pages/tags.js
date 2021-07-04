@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import echarts from 'echarts'
+import { message } from "antd"
 
 import Layout from '../components/Layout'
 
@@ -122,9 +123,10 @@ const TagPage = () => {
 
     maskImage.src = require('../images/cloud.svg');
     chart.on('click', function (params) {
-      const name = params.name;
-      const value = params.value;
-      console.log(name + ":" + value);
+      message.info('敬请期待')
+      // const name = params.name;
+      // const value = params.value;
+      // console.log(name + ":" + value);
     })
   }, [])
 
